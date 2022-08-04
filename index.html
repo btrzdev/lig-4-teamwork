@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lig4</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="troca" href="./assets/css/styleI.css">
+   </head>
+
+<body>
+    <audio src="./assets/audio/soundtrack.mp3" id="som" autoplay></audio>
+    <div class="troca-layout">
+        <button id="item">Iniciar</button>
+        <button id="itemN">Dattebayo</button>
+    </div>
+    <main id="princ">
+        <div class="container">
+            <div class="hidden">
+                <div class="jogador_um">
+                    <img src="./assets/images/layout/naruto.webp" alt="naruto">
+                    <p>Nossa vez!</p>
+                </div>
+    
+                <div class="jogador_dois">
+                    <img src="./assets/images/layout/gaara.png" alt="gaara">
+                    <p>Vamos lá!</p>
+                </div>
+            </div>
+            <div class="campo">
+                <section class="area_dos_botoes">
+                    <input type="image" class="bt botao__um" src="./assets/images/seta_padrao.png">
+                    <input type="image" class="bt botao__dois" src="./assets/images/seta_padrao.png">
+                    <input type="image" class="bt botao__tres" src="./assets/images/seta_padrao.png">
+                    <input type="image" class="bt botao__quatro" src="./assets/images/seta_padrao.png">
+                    <input type="image" class="bt botao__cinco" src="./assets/images/seta_padrao.png">
+                    <input type="image" class="bt botao__seis" src="./assets/images/seta_padrao.png">
+                    <input type="image" class="bt botao__sete" src="./assets/images/seta_padrao.png">
+                </section>
+                <section class="area_de_jogo">
+                
+                </section>
+                <figure>
+                    <img src="./assets/images/luke_mobile.png" alt="luke" id="avatarM" width="60px">
+                    <img src="./assets/images/luke_desktop.png" alt="lukeD" id="avatarD" width="60px">
+                    <figcaption id="grr">.</figcaption>
+                </figure>
+            </div>
+
+           
+            
+
+            
+            <div class="modal" id="modal">
+                <div class="modal-conteudo">
+                    <h1 id="frase">Parabéns você venceu!<h1>
+                    <span id="reset">&times;</span>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+    <script src="./assets/javascript/script.js"></script>
+</body>
+
+</html>

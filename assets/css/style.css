@@ -1,0 +1,464 @@
+/* RESTET (SE HOUVER) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.troca-layout{
+    display: none;
+}
+
+
+/* AJUSTES FUTUROS
+UMA IMAGEM DA CAIXA PARA CADA CONTAINER NA MEDIDA CERTA DA TABELA
+ADICIONAR E CORRIGIR A CAPA
+ADICIONAR OS LAYOUT EXTRA E BOTÕES DE MUDANÇA DE LAYOUT
+COLOCAR FONTE PIXELADA
+
+
+FEATURES ADICIONAIS FUTURAS
+- CONTADOR DE VITORIA
+- TELA DE AJUDA
+- CONTROLE DE SOM
+TELA EXTRA COM
+- SELEÇÃO DE PERSONAGEM
+- SEÇÃO SOBRE (CREDITOS E LINKEDINs)
+- REGRAS
+
+*/
+
+
+
+/* TABELA */
+/* body {     
+    background-color: black;
+    background-image: url(../images/caixa-metal.png), url(../images/fundo_mobile.png);
+    background-repeat: no-repeat, repeat;
+    background-size: 70%, 100%;
+    background-position-x: 15vw, 0vw;
+    background-position-y: 0vh, 0vh;
+    image-rendering: pixelated; 
+    display: flex;
+    flex-direction: column    
+} */
+
+body {     
+    background-color: black;
+    background-image: url(../images/fundo_mobile.png);
+    background-size: 100%;
+    /* background-position-x: 15vw, 0vw;
+    background-position-y: 0vh, 0vh; */
+    image-rendering: pixelated; 
+    /* display: flex;
+    flex-direction: column     */
+}
+
+#princ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 60px;
+}
+
+.container{
+    display: flex;
+    /* flex-direction: column-reverse; */
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    background-image: url(../images/caixa-metal.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 245px;
+    /* top: 5vh;
+    right: 4vw; */
+}
+
+.campo {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+}
+
+.area_dos_botoes{
+    display: flex;    
+    justify-content: center;    
+    width: inherit; 
+    /* margin-left: 10vw;   */
+}
+
+figure {
+    margin: 0 auto;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+/* 
+.campo img[alt="chew"] {
+    position: relative;
+    bottom: 18vh;
+    display: none;
+} */
+
+
+
+
+.campo img[alt="chew"], .campo img[alt="luke"], .campo img[alt="chewD"], .campo img[alt="lukeD"] {
+    margin: 0 auto; 
+    display: none;
+}
+
+.campo img[alt="luke"] {
+    margin-top: 10px;
+    display: initial;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    width: 100%;  
+}
+
+.item-na-linha {
+    width: 29px;
+    height: 29px;
+    background-color: transparent;
+    border-left: 0.5px solid purple;
+    border-right: 0.5px solid purple;
+    border-top: 0.5px solid purple;
+    border-bottom: 0.5px solid purple;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-botao{
+    display: flex;    
+    justify-content: center;
+    
+}
+
+
+/* BOTOES */
+
+.bt {
+    margin: 6px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 21px;
+    height: 25px;  
+    /* width: 1.5rem;
+    height: 1.5rem;   */
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin: 4px;
+    cursor: pointer; 
+    position: relative;
+}
+
+.bt-block {
+    pointer-events: none;
+}
+
+.bt:hover {
+    animation: shake 1s infinite;
+    /* background-image: url(/assets/images/flecha.png); */
+}
+
+@keyframes shake {
+    0%   {left:0px; top:0px;}
+    25%  {top:-5px;}
+    50%  {top:5px;}
+    75%  {top:-5px;}
+    100% {top:0}
+}
+
+.botao:hover {
+    background-color: gray;
+    border-radius: 5px;
+    
+}
+
+/* BOLINHAS */
+.playerUm, .playerDois {
+    /* padding: 11px; */
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    animation: queda 4s;
+    position: relative;
+    /* margin: 0 auto; */
+} 
+
+@keyframes queda {
+    0%   {left:0px; top:-200px;}
+    25%  {left:0; top:0px;}
+    50%  {left:0}
+    75%  {left:0}
+    100% {left:0; top:0;}
+}
+
+.playerUm {
+    background-image: url(../images/earth.png);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    image-rendering: pixelated;
+}
+
+.playerDois {
+    background-image: url(../images/mars.png);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    image-rendering: pixelated;
+}
+
+/*Modal*/
+  .modal{
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;       
+  }  
+
+  .modal-conteudo {
+    background-color: rgb(145, 18, 204);
+    padding: 16px 24px;
+    width: 384px;
+    border-radius: 10px; 
+    height: 20px; 
+    font-size: 12px;
+    font-family: 'Play';
+    color: white;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: inset 0 0 1em rgb(189, 8, 83), 0 0 1em rgb(204, 0, 255);
+  }
+  
+  #reset { 
+    font-size: 13px;
+    margin-left: 50px;
+    background-color: rgb(90, 22, 218);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 2px rgb(204, 0, 255);
+    color: white;
+    cursor: pointer;
+  }
+
+  #reset:hover {
+    background-color: rgb(19, 226, 226);
+    color: black;
+    box-shadow: inset 0 0 1em rgb(24, 247, 235), 0 0 1em rgb(229, 255, 0);
+  }
+  
+  #reset:active { 
+    box-shadow: 1px 1px 1px 1px black;
+  }
+
+  span:hover {
+    background-color: darkgray;
+  }
+  .mostrar-modal {
+    opacity: 1;
+    visibility: visible;    
+  }
+ 
+  footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .informacoes{
+      display: flex;
+      justify-content: space-around;
+      width: 280px;
+  }
+  .playerInfo {
+      padding: 0;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+  }
+  figcaption {
+    float: right;
+    margin-top: 25px;
+    margin-left: 15px;
+    font-family: monospace;
+    font-size: 12px;
+    color: white;
+    background-color: violet;
+    opacity: 83%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/*MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+    body { 
+        background-image: url(../images/fundo-nave.gif);
+        background-repeat: no-repeat;
+        background-size: 100%;        
+        image-rendering: pixelated; 
+    }
+
+    .area_de_jogo {
+        width: 315px;
+    }
+
+    #princ{
+        margin-top: 0;
+    }
+    .container{
+        background-image: url(../images/screen.png);
+        width: 320px;
+        height: none;
+        margin-left: 9vw;    
+        margin-top: 7vh;
+    }
+    .campo {
+        padding-top: 69px;
+    }
+    
+    .campo img[alt="luke"] {
+        margin: 0 auto; 
+        display: none;
+    }
+    
+    .campo #avatarD {
+        display: initial;
+        border-radius: 100%;
+        width: 18vw;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 8vw;
+    }
+
+    figcaption {
+        margin: 3vh auto;
+        font-family: monospace;
+        font-size: 25px;
+        color: white;
+        background-color: violet;
+        opacity: 83%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .bt {
+        width: 28px;
+        height: 30px; 
+        margin: 0 5px 5px 5px;
+    }
+
+
+    .item-na-linha {
+        width: 38px;
+        height: 38px;
+        border-left: 0.5px solid purple;
+        border-right: 0.5px solid purple;
+        border-top: 0.5px solid purple;
+        border-bottom: 0.5px solid purple;
+        box-shadow: inset 0 0 1em , 0 0 0.7em rgb(204, 0, 255);
+    }
+
+}
+@media screen and (min-width: 1024px){
+    body{
+        background-size: 120%;    
+    }
+    .container{
+        margin-top: 20vh;
+    }
+}
+@media screen and (min-width: 1440px){
+    body{
+        background-size: 100%;
+                
+    }
+    
+    .container{
+        width: 500px;
+        height: 750px;  
+        margin-top: 10vh; 
+        margin-left: 0;
+    }
+
+    .area_dos_botoes {
+        width: 500px;
+        padding-top:0px;
+
+    }
+    .area_de_jogo {
+        width: 500px;
+    }
+   
+    .campo {
+        padding-top: 95px;
+    }
+    .item-na-linha {
+        width: 60px;
+        height: 60px;
+    }
+    .bt {
+        width: 50px;
+        height: 50px; 
+        margin: 0 5px 5px 5px;
+    }
+    .playerUm {
+        height: 50px;
+        width: 50px;
+        background-size: 60px;
+    }
+    
+    .playerDois {
+        height: 50px;
+        width: 50px;
+        background-size: 60px;
+    }
+
+    figure {
+        left: 13vw;
+    }
+}
+
+

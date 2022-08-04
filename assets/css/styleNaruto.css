@@ -1,0 +1,315 @@
+/* RESTET (SE HOUVER) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
+/* TABELA */
+body { 
+    background-image: url(../images/layout/konoha.jpeg); 
+    display: flex;
+    flex-direction: column;
+    background-size: auto;  
+    background-repeat: no-repeat;
+    background-size: 1920px;
+}
+.area_de_jogo{
+    width: 800px;
+    height: 600px;
+    border: 10px solid;
+    background-image: url(../images/layout/plano_fundo.jpg);
+    background-size: 800px;
+    background-repeat: no-repeat;
+    border-color: rgb(189, 22, 0);
+    border-radius: 5px;
+    box-shadow: 2px 5px 30px 2px orange;
+
+}
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.item-na-linha {
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border-left: 0.5px solid;
+    border-right: 0.5px solid;
+    border-top: 0.5px solid;
+    border-bottom: 0.5px solid;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.caixa-botao{
+    display: flex;    
+    justify-content: center;
+
+}
+.area_dos_botoes{
+    display: flex;    
+    justify-content: center;
+
+}
+
+/* BOTOES */
+
+.bt {
+    width: 115px;
+    height: 110px; 
+    margin-top: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer; 
+    margin-bottom: 5px;
+}
+
+.bt:hover {
+    background-color: rgb(224, 207, 168);
+    opacity: 80%;
+    border-radius: 100%;
+    transition: 0.7s;
+}
+
+/* BOLINHAS */
+
+.bola-vermelha {
+background-color: red;
+    width: 10px; 
+    height: 10px;
+    border-radius: 10px; 
+}
+
+.bola-preta {
+background-color: black;
+    width: 10px; 
+    height: 10px;
+    border-radius: 10px; 
+}
+
+.playerUm, .playerDois {
+    padding: 16px;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    /* margin: 0 auto; */
+} 
+
+.playerUm {
+    background-color: black;
+}
+
+.playerDois {
+    background-color: green;
+}
+
+.jogador_dois, .jogador_um {
+    display: none;
+    transition: 2s;
+}
+
+img[alt="naruto"] {
+    position: absolute;
+    width: 350px;
+    left: 70px;
+    top: 80px
+}
+
+p {
+    position: absolute;
+    left: 70px;
+    top: 720px;
+    font-size: 50px;
+    background-color: rgb(255, 157, 0);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bolder;
+    opacity: 85%;
+}
+
+img[alt="gaara"] {
+    position: absolute;
+    width: 350px;
+    height: 650px;
+    left: 1450px;
+    top: 70px
+}
+
+.jogador_dois p {
+    position: absolute;
+    left: 1450px;
+    top: 740px;
+    font-size: 50px;
+    background-color: rgb(126, 0, 0);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bolder;
+    opacity: 85%;
+}
+
+/*Modal*/
+.modal{
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;       
+}  
+
+.modal-conteudo {
+    background-color: white;
+    padding: 16px 24px;
+    width: 384px;
+    border-radius: 10px; 
+    height: 20px; 
+    font-size: 15px;
+    font-family: 'Play';
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#reset { 
+    font-size: 13px;
+    margin-left: 50px;
+    background-color: rgb(0, 0, 104);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 2px rgb(0, 0, 0);
+    color: darkgray;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: rgb(0, 0, 202);
+    color: rgb(228, 228, 228);
+}
+
+#reset:active { 
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+span:hover {
+    background-color: darkgray;
+}
+.mostrar-modal {
+    opacity: 1;
+    visibility: visible;    
+}
+
+.playerUm, .playerDois, .naruto, .gaara {
+    width: 60px;
+    height: 60px;
+}
+
+.playerUm {
+    background-color: rgb(221, 144, 0);
+    box-shadow: 2px 5px 15px 2px orange;
+    opacity: 80%;
+    animation-name: descerNaruto;
+    animation-duration: 5s;
+    position: relative;
+}
+
+.playerDois {
+    background-color: rgb(126, 0, 0);
+    box-shadow: 2px 5px 15px 2px red;
+    opacity: 75%;
+    animation-name: descerGaara;
+    animation-duration: 5s;
+    position: relative;
+}
+
+@keyframes descerNaruto {
+    0%   {background-color:rgb(126, 0, 0); left:0px; top:-580px;}
+    25%  {left:0; top:0px;}
+    50%  {left:100px}
+    75%  {left:0}
+    100% {left:0; top:0;}
+}
+
+@keyframes descerGaara {
+    0%   {background-color:rgb(221, 144, 0); left:0px; top:-580px;}
+    25%  {left:0; top:0px;}
+    50%  {left:100px}
+    75%  {left:0}
+    100% {left:0; top:0;}
+}
+
+
+footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.indicador {
+    background-color: aliceblue;
+    border: 2px solid green;
+    
+}
+.indicadorB{
+    border-radius: 50% 0px 0px 50%;
+}
+.indicadorG{
+    border-radius: 0px 50% 50% 0px;
+
+}
+.informacoes{
+    display: flex;
+    justify-content: space-around;
+    width: 280px;
+}
+.playerInfo {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+/* OBS: Comentarios só para fim de organização, edite e/ou apaque da forma que achar melhor para seu codigo */
+

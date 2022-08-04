@@ -1,0 +1,80 @@
+body {
+    background-image: url(../images/fundo_mobile.png);
+}
+
+.troca-layout {
+    display: flex;
+    flex-direction: column;
+    margin: 18vh 0;
+    align-items: center;
+}
+
+main {
+    display: none;
+}
+
+button {
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 40vw;
+    border-radius: 20px;
+    background-color: rgb(63, 0, 63);
+    border: 5px solid rgb(112, 0, 112);
+    color: purple;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px 4px rgb(200, 67, 200);
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 1px 2px 3px 4px rgb(200, 67, 200);
+    background-color: rgb(236, 124, 236);
+    border: 5px solid purple;
+    color: purple;
+    transition: 2s;
+}
+
+#itemN {
+    font-size: 15px;
+    width: 33vw;
+    background-color: rgb(85, 45, 0);
+    border: 5px solid rgb(149, 85, 0);
+    box-shadow: 1px 2px 3px 4px rgb(240, 136, 0);
+    color: rgb(124, 70, 0);
+}
+
+#itemN:hover { 
+    background-color: rgb(233, 124, 0);
+    border: 5px solid rgb(149, 85, 0);
+    box-shadow: 1px 2px 3px 4px rgb(240, 136, 0);
+    color: rgb(78, 44, 0);
+}
+
+@media only screen and (min-width: 768px) {
+    button {
+        width: 30vw;
+        font-size: 50px;
+    }
+    
+    #itemN {
+        font-size: 20px;
+        width: 23vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    button {
+        width: 20vw;
+        font-size: 60px;
+    }
+    
+    #itemN {
+        font-size: 25px;
+        width: 13vw;
+    }
+}
+
+
+
+
