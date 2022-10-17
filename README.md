@@ -1,8 +1,8 @@
 # Entrega: Lig-4
 
-**ATENÇÃO!!**
+Link para aplicação: https://btrzdev.github.io/lig-4-teamwork/
 
-**Esta entrega é HARD DEADLINE, ou seja, se você não submete-la até o prazo de entrega, você NÃO poderá enviar após a data de entrega. Reveja atentamente no fim da entrega o seu tempo limite, qualquer dúvida chame o seu Facilitador.**
+Regras da aplicação:
 
 No Lig-4, um jogador assume a cor Vermelha e o outro assume a cor Preta. Os jogadores se alternam inserindo suas peças em uma das 7 colunas de uma **tabela 7x6**. O primeiro jogador que conseguir **quatro** de suas peças em uma linha (seja horizontal, vertical ou diagonal) vence.
 
